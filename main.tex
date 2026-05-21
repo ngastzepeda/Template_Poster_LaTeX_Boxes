@@ -51,8 +51,19 @@
 \begin{document}
 \graphicspath{ {images/} }
 
-\definecolor{ubblue}{cmyk}{0.65, 0.50, 0.23, 0.10}
-\definecolor{ubblack}{cmyk}{0.65, 0.50, 0.23, 0.50}
+
+%%===========%%
+%% Uni Wien colours %%
+%%===========%%
+
+\definecolor{uniwienblack}{RGB}{0,0,0}
+\definecolor{uniwienwhite}{RGB}{255,255,255}
+\definecolor{uniwienblue}{RGB}{0,99,166}
+\definecolor{uniwienred}{RGB}{167,28,73}
+\definecolor{uniwienorange}{RGB}{221,72,20}
+\definecolor{uniwienyellow}{RGB}{246,168,0}
+\definecolor{uniwiengreen}{RGB}{148,193,84}
+\definecolor{uniwiencyan}{RGB}{17,137,122}
 
 \background{ % Set the background to an image (background.pdf)
 	\begin{tikzpicture}[remember picture,overlay]
@@ -68,9 +79,9 @@ headerborder=open, % Adds a border around the header of content boxes
 colspacing=1em, % Column spacing
 bgColorOne=white, % Background color for the gradient on the left side of the poster
 bgColorTwo=white, % Background color for the gradient on the right side of the poster
-borderColor=black, % Border color
-headerColorOne=ubblue, % Background color for the header in the content boxes (left side)
-headerColorTwo=ubblue, % Background color for the header in the content boxes (right side)
+borderColor=uniwienblue, % Border color
+headerColorOne=uniwienblue, % Background color for the header in the content boxes (left side)
+headerColorTwo=uniwienblue, % Background color for the header in the content boxes (right side)
 headerFontColor=white, % Text color for the header text in the content boxes
 boxColorOne=white, % Background color of the content boxes
 textborder=rounded, %rectangle, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
@@ -92,23 +103,21 @@ columns=4
 %
 {
 \textsf %Sans Serif
-{Put your amazing poster title here 
-
-}
+{Put your amazing poster title here}
 }
 {
     \sf\vspace{+0.65em}\\
     First Author Name, Second Author Name\\
     \small{
-        Decision and Operation Technologies Group, Bielefeld University, 33615 Bielefeld, Germany \\
-        {first.last@uni-bielefel.de}, first.last@uni-bielefeld.de
-        (This research is funded through DFG project No. XXX) % remove it not applicable
+        Department of Business Decisions and Analytics, University of Vienna, 1090 Vienna, Austria \\
+        {first.last@univie.ac.at}, first.last@univie.ac.at
+        (This research is funded through XX project No. YYY) % remove it not applicable
     } \\
     \vspace{-1.5em}
 }
 % University/lab logo
 {
-    \includegraphics[width=0.25\textwidth]{images/logos_ub_dfg_2.png}
+    \includegraphics[width=0.25\textwidth]{images/logo_uni_wien.jpg}
 } % ignore the error here, we need the brackets for correct formatting
 
 

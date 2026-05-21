@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{einstein}
+Albert Einstein.
+\newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the electrodynamics of moving bodies].
+\newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
+
+\bibitem{dirac}
+Paul Adrien~Maurice Dirac.
+\newblock {\em The Principles of Quantum Mechanics}.
+\newblock International series of monographs on physics. Clarendon Press, 1981.
+
+\bibitem{knuthwebsite}
+Donald Knuth.
+\newblock Knuth: Computers and typesetting.
+
+\bibitem{knuth-fa}
+Donald~E. Knuth.
+\newblock {\em Fundamental Algorithms}, chapter 1.2.
+\newblock Addison-Wesley, 1973.
+
+\bibitem{knuth-acp}
+Donald~E. Knuth.
+\newblock {\em The Art of Computer Programming}.
+\newblock Four volumes. Addison-Wesley, 1968.
+\newblock Seven volumes planned.
+
+\bibitem{ctan}
+George~D. Greenwade.
+\newblock The {C}omprehensive {T}ex {A}rchive {N}etwork ({CTAN}).
+\newblock {\em TUGBoat}, 14(3):342--351, 1993.
+
+\end{thebibliography}
