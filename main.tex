@@ -1,0 +1,176 @@
+\documentclass[a1paper,portrait]{baposter}
+
+
+
+\usepackage{wrapfig}
+\usepackage{lmodern}
+
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage[T1]{fontenc}
+\usepackage{float}
+
+
+\selectcolormodel{cmyk}
+
+\usepackage[skip=2pt,font=footnotesize]{caption}
+
+\usepackage{enumitem}
+\usepackage{natbib}
+\usetikzlibrary{backgrounds}
+
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{wrapfig}
+
+
+\setlist{nolistsep}
+
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{lipsum}
+
+\newcommand{\compresslist}{%
+\setlength{\itemsep}{0pt}%
+\setlength{\parskip}{1pt}%
+\setlength{\parsep}{0pt}%
+}
+
+\newenvironment{boenumerate}
+  {\begin{enumerate}\renewcommand\labelenumi{\textbf\theenumi.}}
+  {\end{enumerate}}
+
+
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithmicx}
+%\usepackage{algorithmic}
+
+\begin{document}
+\graphicspath{ {images/} }
+
+\definecolor{ubblue}{cmyk}{0.65, 0.50, 0.23, 0.10}
+\definecolor{ubblack}{cmyk}{0.65, 0.50, 0.23, 0.50}
+
+\background{ % Set the background to an image (background.pdf)
+	\begin{tikzpicture}[remember picture,overlay]
+	\draw (current page.south west)+(-.65em,-.5em) node[anchor=south west]
+	\end{tikzpicture}
+}
+
+
+\begin{poster}
+{
+grid=False,
+headerborder=open, % Adds a border around the header of content boxes
+colspacing=1em, % Column spacing
+bgColorOne=white, % Background color for the gradient on the left side of the poster
+bgColorTwo=white, % Background color for the gradient on the right side of the poster
+borderColor=black, % Border color
+headerColorOne=ubblue, % Background color for the header in the content boxes (left side)
+headerColorTwo=ubblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=rounded, %rectangle, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=false, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.11\textheight, % Height of the header
+headershape=rounded, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headershade=plain,
+headerfont=\Large\textsf, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt, % Width of the border lines around content boxes
+%background=user
+columns=4
+}
+{}
+%
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR NAME
+%----------------------------------------------------------------------------------------
+%
+{
+\textsf %Sans Serif
+{Put your amazing poster title here 
+
+}
+}
+{
+    \sf\vspace{+0.65em}\\
+    First Author Name, Second Author Name\\
+    \small{
+        Decision and Operation Technologies Group, Bielefeld University, 33615 Bielefeld, Germany \\
+        {first.last@uni-bielefel.de}, first.last@uni-bielefeld.de
+        (This research is funded through DFG project No. XXX) % remove it not applicable
+    } \\
+    \vspace{-1.5em}
+}
+% University/lab logo
+{
+    \includegraphics[width=0.25\textwidth]{images/logos_ub_dfg_2.png}
+} % ignore the error here, we need the brackets for correct formatting
+
+
+%%% --- Top part --- %%%
+
+% abstract
+\headerbox{Abstract}{name=abstract,column=0,row=0, span=4}{
+\lipsum[1]
+}
+
+%%% --- START middle part --- %%%
+
+%% left column
+
+% skill vrp
+\headerbox{Section 1}{name=sec1, column=0, below=abstract, span=2}{
+
+\lipsum[2-6]
+
+}
+
+%% right column
+
+% deep reinforcement learning
+\headerbox{Section 2}{name=sec2, column=2, span=2, below=abstract}{
+
+\lipsum[7-8]
+
+}
+
+% training
+\headerbox{Section 3}{name=sec3, column=2, span=2, below=sec2}{
+
+\lipsum[9-10]
+
+}
+
+%%% --- END middle part --- %%%
+
+%%% --- Bottom part --- %%%
+
+% results
+\headerbox{Section 4/Results}{name=model, span=3, column=0, below=sec1, above=bottom}{
+
+\lipsum[11-12]
+
+}
+
+% references
+\headerbox{References}{name=references,column=3,span=1,below=sec1, above=bottom}{ % for "below" reference whichever box reaches the furthest down.
+\setlength{\bibsep}{2pt plus 0.3ex}
+%\fontsize{5pt}{5pt}
+\tiny % Reduce the font size in this block
+%\scriptsize
+\renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
+\nocite{*} % Insert publications even if they are not cited in the poster
+
+
+\bibliographystyle{unsrt}
+\bibliography{bib.bib} % Use sample.bib as the bibliography file
+%\vspace{-1mm}
+}
+\end{poster}
+
+\end{document}
