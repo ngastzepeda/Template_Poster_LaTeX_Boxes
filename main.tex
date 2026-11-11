@@ -58,7 +58,7 @@
 
 \definecolor{uniwienblack}{RGB}{0,0,0}
 \definecolor{uniwienwhite}{RGB}{255,255,255}
-\definecolor{uniwienblue}{RGB}{0,99,166}
+\definecolor{uniwienblue}{cmyk}{1,0.45,0,0.14} % official Universitätsblau CMYK 100/45/0/14
 \definecolor{uniwienred}{RGB}{167,28,73}
 \definecolor{uniwienorange}{RGB}{221,72,20}
 \definecolor{uniwienyellow}{RGB}{246,168,0}
@@ -117,7 +117,9 @@ columns=4
 }
 % University/lab logo
 {
-    \includegraphics[width=0.25\textwidth]{images/logo_uni_wien.jpg}
+    % 19.92mm = 48mm / 2.4096: pgfpages rescales the page by 1/fontscale (0.415),
+    % so the logo prints at exactly 48mm height
+    \includegraphics[height=19.92mm]{images/logo_uni_wien.jpg}
 } % ignore the error here, we need the brackets for correct formatting
 
 
